@@ -8,10 +8,12 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, x;
-        cin >> n >> x;
-        int subs = (n + 5) / 6;
-        cout << subs * x << "\n";
+        int x, y, m;
+        cin >> x >> y >> m;
+        if (x * m < y)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
     }
     return 0;
-}   
+}
