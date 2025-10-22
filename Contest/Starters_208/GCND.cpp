@@ -1,4 +1,4 @@
-//https://www.codechef.com/problems/GUCD
+// https://www.codechef.com/problems/GUCD
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,11 +21,10 @@ int main()
         }
         sort(v.rbegin(), v.rend());
         int ans = 0;
-        if (v[0] == v[1])
-            ans = v[0] - 1;
+        if (v[0] - 1 == v[n - 1])
+            cout << v[n - 1] - 1 << nl;
         else
-            ans = v[0] - __gcd(v[0], v[1]);
-        cout << ans << nl;
+            cout << v[0] - 1 << nl;
     }
     return 0;
 }
