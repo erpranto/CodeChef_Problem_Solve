@@ -1,3 +1,5 @@
+//https://www.codechef.com/START212C/problems/P2BAR
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
