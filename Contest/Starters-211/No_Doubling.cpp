@@ -1,4 +1,4 @@
-//https://www.codechef.com/problems/NODOUB
+// https://www.codechef.com/problems/NODOUB
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,17 +23,20 @@ int main()
     {
         int n;
         cin >> n;
-        vector<ll> a(n);
+        vector<long long int> v(n);
         for (int i = 0; i < n; i++)
-            cin >> a[i];
-        sort(a.rbegin(), a.rend());
-        for (int i = 0; i < n; ++i)
         {
-            if (i > 0)
-                cout << " ";
-            cout << a[i];
+            cin >> v[i];
         }
+        sort(v.rbegin(), v.rend());
+        if (v[0] == v[1] && n > 2)
+        {
+            swap(v[1], v[n - 1]);
+        }
+        for (auto x : v)
+            cout << x << " ";
         cout << nl;
     }
+
     return 0;
 }

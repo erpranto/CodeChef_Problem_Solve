@@ -1,5 +1,3 @@
-// https://www.codechef.com/problems/MXPERST
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -25,27 +23,20 @@ int main()
         cin >> n;
         string s;
         cin >> s;
-        if (s[0] == '0' || s[n - 1] == '0')
-        {
-            cout << -1 << '\n';
-            continue;
-        }
-
-        vector<int> p(n);
+        int cnt = 0;
         for (int i = 0; i < n; i++)
-            p[i] = i + 1;
-
-        for (int i = 1; i < n - 1; i++)
         {
             if (s[i] == '0')
             {
-                swap(p[i], p[i + 1]);
+                for (int j = i; j < n; j++)
+                {
+                    if (s[j] =='1')
+                        cnt++;
+                }
+                break;
             }
         }
-
-        for (int i = 0; i < n; i++)
-            cout << p[i] << " ";
-        cout << '\n';
+        cout << cnt << nl;
     }
     return 0;
 }
